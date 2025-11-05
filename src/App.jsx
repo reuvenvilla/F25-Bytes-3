@@ -71,21 +71,24 @@ export default function App() {
   const isDropDisabled = (col) => isColumnFull(board, col);
 
   function handleDrop(col) {
-    if (isColumnFull(board, col)) return;
-    const row = getLowestEmptyRow(board, col);
-    if (row === -1) return;
+    // TODO: Check if Column is Full
+
+
+    // TODO: Get lowest bottom empty row
 
     setBoard((prev) => {
-      const next = cloneBoard(prev);
-      next[row][col] = current;
-      return next;
+      // TODO: Update Board State
+
     });
-    setCurrent((p) => (p === RED ? YELLOW : RED));
+
+    
+    // TODO: Change the next player
+    
   }
 
   function handleReset() {
-    setBoard(createEmptyBoard());
-    setCurrent(RED);
+    // TODO: Change the board back to empty
+
   }
 
   const statusText = useMemo(

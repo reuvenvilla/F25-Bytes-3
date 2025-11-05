@@ -1,0 +1,66 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: grid;
+  place-items: center;   /* centers both horizontally & vertically */
+  background: #0b1220;   /* optional */
+}
+
+
+/* Layout */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.colBtn {
+  padding: 8px;
+  font-weight: 600;
+}
+
+.grid {
+  --cols: 6;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 56px);
+  gap: 10px;
+  justify-content: start;
+}
+
+/* Cells */
+.hole {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #1e1e1e;
+  border: 2px solid #444;
+  box-shadow: inset 0 0 0 6px #0a3a6a;
+}
+
+.piece-red {
+  background: #e74c3c;
+}
+
+.piece-yellow {
+  background: #f1c40f;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.resetBtn {
+  padding: 6px 10px;
+  font-weight: 600;
+}
+
+.status {
+  font-weight: 600;
+}
